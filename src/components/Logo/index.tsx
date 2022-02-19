@@ -17,7 +17,7 @@ const Logo = ({
 			fill="none"
 			viewBox="0 0 158 48"
 			role="img"
-			aria-label="Wongames"
+			aria-label="Won games"
 		>
 			<path
 				fill="url(#a)"

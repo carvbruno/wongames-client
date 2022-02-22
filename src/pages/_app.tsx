@@ -9,7 +9,8 @@ function App({ Component, pageProps }: AppProps) {
 	return (
 		<ThemeProvider theme={theme}>
 			<Head>
-				<title>Wongames</title>
+				<title>Won Games</title>
+				<meta name="description" content="the best game store in the world" />
 			</Head>
 			<GlobalStyle />
 			<Component {...pageProps} />

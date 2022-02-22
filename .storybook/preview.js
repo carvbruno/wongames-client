@@ -11,12 +11,25 @@ export const parameters = {
       date: /Date$/,
     },
   },
+	backgrounds: {
+    default: 'won-light',
+    values: [
+      {
+        name: 'won-dark',
+        value: theme.colors.mainBg,
+      },
+      {
+        name: 'won-light',
+        value: theme.colors.white,
+      },
+    ],
+  },
 }
 
 export const decorators = [
 	(Story) => (
 		<ThemeProvider theme={theme}>
-			<GlobalStyle />
+			<GlobalStyle removeBg />
 			<Story />
 		</ThemeProvider>
 	)

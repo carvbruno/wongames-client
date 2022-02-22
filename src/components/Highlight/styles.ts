@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-import { HighLightProps } from '.'
+import { HighlightProps } from '.'
 
-export type WrapperProps = Pick<HighLightProps, 'backgroundImage' | 'alignment'>
+export type WrapperProps = Pick<HighlightProps, 'backgroundImage' | 'alignment'>
 
 const wrapperModifiers = {
 	right: () => css`

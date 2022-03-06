@@ -1,7 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import theme from 'styles/theme'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import Checkbox from '.'
@@ -56,7 +55,14 @@ describe('<Checkbox />', () => {
 	it('should to be accessible with tab', async () => {
 		const onCheck = jest.fn()
 
-		renderWithTheme(<Checkbox label="checkbox" onCheck={onCheck} isChecked />)
+		renderWithTheme(
+			<Checkbox
+				label="checkbox"
+				labelFor="checkbox"
+				onCheck={onCheck}
+				isChecked
+			/>
+		)
 
 		expect(document.body).toHaveFocus()
 

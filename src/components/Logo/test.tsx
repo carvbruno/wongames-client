@@ -47,4 +47,10 @@ describe('<Logo />', () => {
 			}
 		)
 	})
+
+	it('it should render with id', () => {
+		const { container } = renderWithTheme(<Logo id="myId" />)
+
+		expect(container.querySelector('#paint_linear_myId')).toBeInTheDocument()
+	})
 })

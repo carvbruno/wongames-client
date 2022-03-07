@@ -1,5 +1,4 @@
-import '../../../.jest/match-media-mock'
-
+import 'match-media-mock'
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
@@ -7,55 +6,45 @@ import GameCardSlider from '.'
 
 const items = [
 	{
-		title: 'Defy death 1',
-		img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+		title: 'Population Zero',
 		developer: 'Rockstar Games',
-		price: 'R$ 140,00',
-		promotionalPrice: 'R$ 100,00'
+		img: 'https://source.unsplash.com/user/willianjusten/300x140',
+		price: 'R$ 235,00',
+		promotionalPrice: 'R$ 215,00'
 	},
 	{
-		title: 'Defy death 2',
-		img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+		title: 'Population Zero',
 		developer: 'Rockstar Games',
-		price: 'R$ 140,00',
-		promotionalPrice: 'R$ 100,00'
+		img: 'https://source.unsplash.com/user/willianjusten/300x141',
+		price: 'R$ 235,00',
+		promotionalPrice: 'R$ 215,00'
 	},
 	{
-		title: 'Defy death 3',
-		img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+		title: 'Population Zero',
 		developer: 'Rockstar Games',
-		price: 'R$ 140,00',
-		promotionalPrice: 'R$ 100,00'
+		img: 'https://source.unsplash.com/user/willianjusten/300x142',
+		price: 'R$ 235,00',
+		promotionalPrice: 'R$ 215,00'
 	},
 	{
-		title: 'Defy death 4',
-		img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+		title: 'Population Zero',
 		developer: 'Rockstar Games',
-		price: 'R$ 140,00',
-		promotionalPrice: 'R$ 100,00'
+		img: 'https://source.unsplash.com/user/willianjusten/300x143',
+		price: 'R$ 235,00',
+		promotionalPrice: 'R$ 215,00'
 	},
 	{
-		title: 'Defy death 5',
-		img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+		title: 'Population Zero',
 		developer: 'Rockstar Games',
-		price: 'R$ 140,00',
-		promotionalPrice: 'R$ 100,00'
-	},
-	{
-		title: 'Defy death 6',
-		img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-		developer: 'Rockstar Games',
-		price: 'R$ 140,00',
-		promotionalPrice: 'R$ 100,00'
+		img: 'https://source.unsplash.com/user/willianjusten/300x144',
+		price: 'R$ 235,00',
+		promotionalPrice: 'R$ 215,00'
 	}
 ]
 
-describe('<GameCardSlider />', () => {
+describe('<GameSlider />', () => {
 	it('should render with 4 active items', () => {
-		const { container } = renderWithTheme(
-			<GameCardSlider items={items} color="white" />
-		)
-
+		const { container } = renderWithTheme(<GameCardSlider items={items} />)
 		expect(container.querySelectorAll('.slick-active')).toHaveLength(4)
 	})
 

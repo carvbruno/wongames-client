@@ -20,12 +20,8 @@ export const Wrapper = styled.section`
 				justify-content: center;
 				margin: 0 ${theme.spacings.xxsmall};
 				cursor: pointer;
-				transition: box-shadow ${theme.transition.default};
 				&.slick-active {
 					background: ${theme.colors.primary};
-				}
-				&:focus-within {
-					box-shadow: 0 0 0 0.3rem ${theme.colors.secondary};
 				}
 			}
 			button {
@@ -33,12 +29,6 @@ export const Wrapper = styled.section`
 				width: 1.2rem;
 				height: 1.2rem;
 				cursor: pointer;
-			}
-		}
-		.slick-slide {
-			visibility: hidden;
-			&.slick-active.slick-current {
-				visibility: visible;
 			}
 		}
 		${media.greaterThan('large')`
